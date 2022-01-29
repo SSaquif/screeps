@@ -52,11 +52,9 @@
 
 const RoleHarvester = require("./role.harvester");
 
-const gameLoop = () => {
+module.exports.loop = function () {
   for (var name in Game.creeps) {
     var creep = Game.creeps[name];
     RoleHarvester.run(creep);
   }
 };
-
-module.exports = gameLoop;
