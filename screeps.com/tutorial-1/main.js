@@ -1,4 +1,3 @@
-
 // module.exports.loop = function () {
 //     var creep = Game.creeps['Harvester1'];
 //     var sources = creep.room.find(FIND_SOURCES);
@@ -41,12 +40,23 @@
 //     }
 // }
 
-var roleHarvester = require('role.harvester');
+// var roleHarvester = require('role.harvester');
 
-module.exports.loop = function () {
+// module.exports.loop = function () {
 
-    for(var name in Game.creeps) {
-        var creep = Game.creeps[name];
-        roleHarvester.run(creep);
-    }
-}
+//     for(var name in Game.creeps) {
+//         var creep = Game.creeps[name];
+//         roleHarvester.run(creep);
+//     }
+// }
+
+const RoleHarvester = require("./role.harvester");
+
+const gameLoop = () => {
+  for (var name in Game.creeps) {
+    var creep = Game.creeps[name];
+    RoleHarvester.run(creep);
+  }
+};
+
+module.exports = gameLoop;
