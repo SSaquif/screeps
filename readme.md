@@ -18,8 +18,8 @@
 ## Intro:Buiding a Creep with Memory & Suicide
 
 ```js
-Game.spawns["Spawn1"].spawnCreep([WORK, CARRY, MOVE], "Builder1", {
-  memory: { role: "builder" },
+Game.spawns["Spawn1"].spawnCreep([WORK, CARRY, MOVE], "Harvy-1", {
+  memory: { role: "harvester" },
 });
 // kill creep using name
 Game.creeps["Harvester1"].suicide();
